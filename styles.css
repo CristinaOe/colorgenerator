@@ -5,12 +5,43 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-header {
-  padding: 1em;
+h1 {
+  padding: 0;
+  margin: 0.5em 0;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.color-picker-menu {
+  display: flex;
+  margin: 2em 0;
+  justify-content: center;
+  gap: 15px;
+}
+
+input[type="color" i] {
+  background-color: #fff;
+  width: 60px;
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid rgb(58, 58, 58);
+}
+
+select {
+  width: 12%;
+  height: 35px;
+  line-height: 4px;
+  border: 1px solid rgb(58, 58, 58);
 }
 .container {
-  width: 75%;
+  width: 100%;
   margin: 0 auto;
+}
+
+#scheme-btn {
+  background-color: #f8f9fa;
+  border: 1px solid rgb(58, 58, 58);
+  border-radius: 5px;
 }
 
 #scheme-color {
