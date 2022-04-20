@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Color Scheme Generator</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,7 +16,7 @@
   <body>
     <div class="container">
       <header>
-        <input type="color" id="color-picker" />
+        <input type="color" id="color-picker" value="#F3F55B" />
         <select name="color-pallette" id="color-mode">
           <option value="monochrome">Monochrome</option>
           <option value="monochrome-dark">Monochrome-dark</option>
@@ -29,8 +29,20 @@
         <button id="scheme-btn">Get color scheme</button>
       </header>
       <section>
-        <div id="scheme-color"></div>
-        <div id="hex-text-color"></div>
+        <div id="scheme-color">
+          <div id="color-output" style="background-color: #c8cc0f"></div>
+          <div id="color-output" style="background-color: #ebf01f"></div>
+          <div id="color-output" style="background-color: #f0f44e"></div>
+          <div id="color-output" style="background-color: #f5f87d"></div>
+          <div id="color-output" style="background-color: #f9fbad"></div>
+        </div>
+        <div id="hex-text-color">
+          <p>#C8CC0F</p>
+          <p>#EBF01F</p>
+          <p>#F0F44E</p>
+          <p>#F5F87D</p>
+          <p>#F9FBAD</p>
+        </div>
       </section>
     </div>
     <script src="index.js"></script>

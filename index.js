@@ -9,8 +9,6 @@ const hexTextColor = document.getElementById("hex-text-color");
 let selectColor = colorPicker.value.slice(1);
 let selectMode = colorMode.value;
 
-let url = `https://www.thecolorapi.com/scheme?hex=${selectColor}&mode=${selectMode}&count=5`;
-
 //console.log(selectMode)
 
 colorPicker.addEventListener("change", function () {
@@ -23,8 +21,8 @@ colorMode.addEventListener("change", function () {
 console.log(selectColor);
 
 schemeBtn.addEventListener("click", function () {
-  selectMode = colorMode.value;
-  selectColor = colorPicker.value.slice(1);
+  selectMode;
+  selectColor;
   let url = `https://www.thecolorapi.com/scheme?hex=${selectColor}&mode=${selectMode}&count=5`;
 
   fetch(url)
