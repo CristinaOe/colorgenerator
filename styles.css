@@ -34,13 +34,14 @@ input[type="color" i] {
 select {
   width: 12%;
   height: 35px;
-  line-height: 4px;
+
   border: 1px solid rgb(58, 58, 58);
   cursor: pointer;
 }
 .container {
   width: 100%;
   margin: 0 auto;
+  text-align: center;
 }
 
 #scheme-btn {
@@ -71,18 +72,39 @@ select {
 }
 
 @media (max-width: 570px) {
-  html {
-    font-size: 0.5rem;
+  html,
+  body {
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .color-picker-menu {
+    display: inline;
   }
 
   input[type="color" i] {
     width: 42px;
     height: 28px;
+    vertical-align: top;
+    margin-right: 0.5em;
   }
 
   select {
-    width: 20%;
+    margin-bottom: 1em;
+    width: 25%;
     height: 28px;
+    font-size: 0.9em;
+  }
+
+  #scheme-btn {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    font-size: 0.9em;
   }
 
   #scheme-color {
