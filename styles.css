@@ -28,6 +28,7 @@ input[type="color" i] {
   height: 35px;
   border-radius: 5px;
   border: 1px solid rgb(58, 58, 58);
+  cursor: pointer;
 }
 
 select {
@@ -35,6 +36,7 @@ select {
   height: 35px;
   line-height: 4px;
   border: 1px solid rgb(58, 58, 58);
+  cursor: pointer;
 }
 .container {
   width: 100%;
@@ -45,6 +47,12 @@ select {
   background-color: #f8f9fa;
   border: 1px solid rgb(58, 58, 58);
   border-radius: 5px;
+  transition: transform 0.5s;
+}
+
+#scheme-btn:hover {
+  transform: scale(0.95);
+  cursor: pointer;
 }
 
 #scheme-color {
@@ -52,13 +60,12 @@ select {
   display: flex;
 }
 
-#schemeColor > div {
-}
-#color-output {
+.color-output {
   width: 30%;
+  cursor: pointer;
 }
 
-#hex-text-color {
+#hex-text {
   display: flex;
   justify-content: space-around;
 }
@@ -76,7 +83,9 @@ select {
   select {
     width: 20%;
     height: 28px;
-    line-height: 4px;
-    border: 1px solid rgb(58, 58, 58);
+  }
+
+  #scheme-color {
+    height: 250px;
   }
 }

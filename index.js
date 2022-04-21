@@ -4,12 +4,10 @@ const colorMode = document.getElementById("color-mode");
 const schemeBtn = document.getElementById("scheme-btn");
 
 const schemeColor = document.getElementById("scheme-color");
-const hexTextColor = document.getElementById("hex-text-color");
+const hexText = document.getElementById("hex-text");
 
 let selectColor = colorPicker.value.slice(1);
 let selectMode = colorMode.value;
-
-//console.log(selectMode)
 
 colorPicker.addEventListener("change", function () {
   selectColor = colorPicker.value.slice(1);
@@ -18,7 +16,13 @@ colorPicker.addEventListener("change", function () {
 colorMode.addEventListener("change", function () {
   selectColor = colorMode.value;
 });
-console.log(selectColor);
+
+//colorOutput.addEventListener("click", copyToClipboard);
+
+function copyToClipboard(copyText) {
+  navigator.clipboard.writeText(copyText);
+  alert("Copied!");
+}
 
 schemeBtn.addEventListener("click", function () {
   selectMode;
@@ -33,10 +37,10 @@ schemeBtn.addEventListener("click", function () {
       let colorHex = "";
       for (let color of colors) {
         colorOutput += `
-            <div id="color-output" style="background-color: ${color.hex.value}"></div>`;
-        colorHex += `<p>${color.hex.value}</p>`;
+            <div class="color-output" style="background-color: ${color.hex.value}" onclick="copyToClipboard('${color.hex.value}')"></div>`;
+        colorHex += `<p class="hex-text-color">${color.hex.value}</p>`;
       }
       schemeColor.innerHTML = colorOutput;
-      hexTextColor.innerHTML = colorHex;
+      hexText.innerHTML = colorHex;
     });
 });
