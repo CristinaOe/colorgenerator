@@ -107,8 +107,8 @@ select {
   }
 
   input[type="color" i] {
-    width: 42px;
-    height: 28px;
+    width: 45px;
+    height: 24px;
     vertical-align: top;
     margin-right: 0.5em;
   }
