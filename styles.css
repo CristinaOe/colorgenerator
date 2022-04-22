@@ -100,6 +100,7 @@ select {
 
   h1 {
     font-size: 1.4rem;
+    margin-bottom: 0.8em;
   }
 
   .color-picker-menu {
@@ -114,9 +115,9 @@ select {
   }
 
   select {
-    margin-bottom: 2em;
+    margin-bottom: 1.8em;
     width: 25%;
-    height: 28px;
+    height: 26px;
     font-size: 0.9em;
   }
 
