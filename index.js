@@ -40,7 +40,7 @@ schemeBtn.addEventListener("click", function () {
       let colorHex = "";
       for (let color of colors) {
         colorOutput += `
-            <div class="color-output" style="background-color: ${color.hex.value}" onclick="copyToClipboard('${color.hex.value}')"></div>`;
+            <div class="color-output" style="background-color: ${color.hex.value}" ontouchstart="copyToClipboard('${color.hex.value}')" onclick="copyToClipboard('${color.hex.value}')"></div>`;
         colorHex += `<p class="hex-text-color">${color.hex.value}</p>`;
       }
       schemeColor.innerHTML = colorOutput;
