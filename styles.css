@@ -73,6 +73,25 @@ select {
   justify-content: space-around;
 }
 
+.copied {
+  position: absolute;
+  top: 55%;
+  left: 44%;
+  background-color: black;
+  color: #fff;
+  padding: 0.7rem 1rem;
+  border-radius: 35px;
+  display: none;
+}
+.fa-solid {
+  color: #fff;
+  margin-left: 0.2em;
+}
+
+.copied.active {
+  display: block;
+}
+
 @media (max-width: 570px) {
   html,
   body {

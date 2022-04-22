@@ -6,6 +6,8 @@ const schemeBtn = document.getElementById("scheme-btn");
 const schemeColor = document.getElementById("scheme-color");
 const hexText = document.getElementById("hex-text");
 
+let copiedText = document.getElementsByClassName("copied");
+
 let selectColor = colorPicker.value.slice(1);
 let selectMode = colorMode.value;
 
@@ -17,11 +19,12 @@ colorMode.addEventListener("change", function () {
   selectColor = colorMode.value;
 });
 
-//colorOutput.addEventListener("click", copyToClipboard);
-
 function copyToClipboard(copyText) {
   navigator.clipboard.writeText(copyText);
-  alert("Copied!");
+  document.getElementById("copyId").classList.add("active");
+  setTimeout(function () {
+    document.getElementById("copyId").classList.remove("active");
+  }, 1200);
 }
 
 schemeBtn.addEventListener("click", function () {
