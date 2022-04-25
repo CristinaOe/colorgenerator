@@ -1,12 +1,12 @@
 const colorPicker = document.getElementById("color-picker");
-//console.log(colorPicker)
+
 const colorMode = document.getElementById("color-mode");
 const schemeBtn = document.getElementById("scheme-btn");
 
 const schemeColor = document.getElementById("scheme-color");
 const hexText = document.getElementById("hex-text");
 
-let copiedText = document.getElementsByClassName("copied");
+let copyText = document.getElementsByClassName("copyClass");
 
 let selectColor = colorPicker.value.slice(1);
 let selectMode = colorMode.value;
@@ -16,11 +16,11 @@ colorPicker.addEventListener("change", function () {
 });
 
 colorMode.addEventListener("change", function () {
-  selectColor = colorMode.value;
+  selectMode = colorMode.value;
 });
 
-function copyToClipboard(copyText) {
-  navigator.clipboard.writeText(copyText);
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text);
   document.getElementById("copyId").classList.add("active");
   setTimeout(function () {
     document.getElementById("copyId").classList.remove("active");
@@ -35,6 +35,7 @@ schemeBtn.addEventListener("click", function () {
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
+      console.log(data);
       const colors = data.colors;
       let colorOutput = "";
       let colorHex = "";
