@@ -20,6 +20,7 @@ h1 {
 .color-picker-menu {
   display: flex;
   margin: 2em 0;
+  margin-bottom: 3em;
   justify-content: center;
   gap: 15px;
 }
